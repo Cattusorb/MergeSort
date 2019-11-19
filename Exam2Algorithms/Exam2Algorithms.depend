@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1574180200 source:m:\algorithms2019\exam2algorithms\linked_list.c
+	"linked_list.h"
+
+1574178951 m:\algorithms2019\exam2algorithms\linked_list.h
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<stdbool.h>
+
+1574178895 source:m:\algorithms2019\exam2algorithms\main.c
+	<time.h>
+	"mergesort.h"
+
+1574178971 m:\algorithms2019\exam2algorithms\mergesort.h
+	"linked_list.h"
+
+1574183221 source:m:\algorithms2019\exam2algorithms\mergesort.c
+	"mergesort.h"
+
