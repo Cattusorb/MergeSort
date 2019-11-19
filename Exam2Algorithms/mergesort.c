@@ -36,7 +36,7 @@ LinkedList* split(LinkedList* list) {
 	// through the list. Call this node half.
 	if (size > 1)
     {
-        half = get_n(list, (size / 2)); // get_n doesn't return the node
+        half = get_n(list, (size / 2)); // changed get_n to return the node 
     }
 	// Create a linked list called back and set back->first = half->next
 	back->first = half->next;
