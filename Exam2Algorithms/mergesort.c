@@ -30,16 +30,15 @@ LinkedList* split(LinkedList* list) {
     if (size == 1)
     {
         half = list->first;
-        back = NULL;
     }
 	// If the list size is greater than 1 then get the node that is halfway
 	// through the list. Call this node half.
 	if (size > 1)
     {
-        half = get_n(list, (size / 2)); // changed get_n to return the node 
+        half = get_n(list, ((size / 2) - 1)); // changed get_n to return a node
     }
 	// Create a linked list called back and set back->first = half->next
-	back->first = half->next;
+    back->first = half->next;
 	// Set half->next = NULL, this breaks the first half of the list
 	half->next = NULL;
 	// Return back
@@ -81,7 +80,7 @@ Node* merge(Node* a, Node* b, int (*compare)(void*, void*)) {
 	Node* result;
 	if (compare(a->data, b->data) <= 0)
     {
-        Node* result = a;
+        result = a;
         result->next = merge(a->next, b, compare);
         return result;
     } else
@@ -122,9 +121,9 @@ void merge_sort(LinkedList* list, int (*compare) (void*, void*)) {
 	LinkedList* splitList = split(list);
 	while (splitList != NULL)
     {
+        merge_lists(list, split(list), compare);
         merge_lists(list, splitList, compare);
         splitList = split(splitList);
     }
-
 	return;
 }
