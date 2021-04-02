@@ -1,4 +1,4 @@
-# Exam2Algorithms
+# MergeSort
 
 Merge Sort is an O(N log N) algorithm with arrays.
 With linked lists I don't think this changes whole lot because the main problem with linked lists 
